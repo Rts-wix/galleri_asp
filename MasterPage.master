@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/opsaetning.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/form.css"/>
+        <title>Galleri</title>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_head" runat="server"></asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+
+        <form id="form1" runat="server">
+
+        <div id="main">
+
+            <div id="head">
+                <div class="loginform">
+                    <!-- 
+                
+                        Log ind form START: 
+                    
+                        I PRAKSIS:
+                        1. Denne form skal logge brugeren ind
+
+                        OVERVEJELSER:
+                        Skal log ind formen defineres på ny i hver enkelt fil?
+                
+                    -->
+                
+                        <input type="text" placeholder="Brugernavn">
+                        <input type="password" placeholder="Kodeord">
+                        <input type="submit" name="login" value="Log ind" class="btn">
+                    <!-- Log ind form SLUT -->
+                </div>
+              
+                
+            </div>
+
+            <div id="menu" class="navcontainer">			
+                <nav>
+
+                    <!--
+
+                            MENU START: 
+                            Herunder starter sitets statiske menu. Jeres opgave er at generere denne menu dynamisk.
+
+                            I PRAKSIS:
+                            1. DB: Opret forbindelse til projektes database.
+                            2. SQL: Hent relevant data fra databasen.
+                            3. PHP/C#: Benyt en løkke til at udskrive resultatet.
+
+                            OVERVEJELSER:
+                            Skal alle disse menu punkter være dynamiske?
+                            Skal menuen defineres på ny i hver enkelt fil?
+
+                    -->
+                    <asp:SqlDataSource ID="SqlDataSourceAlbumMenu" runat="server" 
+                        ConnectionString='<%$ ConnectionStrings:DatabaseConnectionString1 %>' 
+                        SelectCommand="SELECT * FROM [Album]"></asp:SqlDataSource>
+
+                    <h3>Fotoalbums:</h3>
+                    <ul>
+                        <li><a href="/Default.aspx">Velkommen</a></li>
+
+                        <asp:Repeater ID="RepeaterAlbumMenu" runat="server" DataSourceID="SqlDataSourceAlbumMenu">
+                            <ItemTemplate>
+                                <li><a href='/Album.aspx?albumid=<%# Eval("Id") %>'>
+                                    <%# Eval("Navn") %>
+                                </a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                        
+                       
+                    </ul>
+
+                    <asp:SqlDataSource ID="SqlDataSourceFotografMenu" runat="server" 
+                        ConnectionString='<%$ ConnectionStrings:DatabaseConnectionString1 %>' 
+                        SelectCommand="SELECT [Id], [Navn] FROM [Fotograf]"></asp:SqlDataSource>
+                   
+                    <asp:Repeater ID="RepeaterFotografMenu" runat="server" DataSourceID="SqlDataSourceFotografMenu">
+                        <HeaderTemplate>
+                            <h3>Fotografer:</h3>
+                                <ul>
+                        </HeaderTemplate>
+
+                        <ItemTemplate>
+                            <li>
+                                <a href="/Album.aspx?fotografId=<%# Eval("Id") %>">
+                                    <%# Eval("Navn") %>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                        
+                        <FooterTemplate>
+                            </ul>
+                        </FooterTemplate>
+                    </asp:Repeater>
+
+                    
+                    <h3>Manualer:</h3>
+                    <ul>
+                        <li><a href="undersider/manual_1.html">Tag et godt billede</a></li>
+                        <li><a href="undersider/manual_2.html">Vælg den rigtige kamera</a></li>
+                    </ul>
+
+                    <!-- 
+
+                                MENU SLUT 
+
+                    -->
+                </nav>
+
+            </div>
+
+            <div id="content">
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Content" runat="server">
+                                <div id="content_midt"></div>
+
+                <div id="content_right">
+
+                    <!--
+                    
+                            BILLEDUDTRÆK START:
+                            Herunder er forsidens 8 billeder defineret statisk. Jeres opgave er at generere et 
+                            dynamisk udtræk, begrænset til 8 tilfældige billeder, fra de 3 album kategorier.
+
+                            Vis et enkelt billede:
+                            1. Hvert thumbnail skal være et link som peger på den store udgave af billedet på serveren.
+                            2. Brug billedet ID via URL'en til at hente det fra serveren.
+
+                            I PRAKSIS:
+                            1. DB: Opret forbindelse til projektes database.
+                            2. SQL: Hent relevant data fra databasen.
+                            3. PHP/C#: Benyt en løkke til at udskrive resultatet.
+                    
+                    -->
+
+                    <!-- DEMO kode -->
+                    <div class="ikon"><a href="http://placebear.com/g/400/500"><img src="http://placebear.com/g/150/75" alt="" /></a></div>
+                    <div class="ikon"><img src="http://placebear.com/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/g/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/g/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/g/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/150/75" alt="" /></div>
+                    <div class="ikon"><img src="http://placebear.com/g/150/75" alt="" /></div>
+                    <!-- DEMO kode slut -->
+                    <!--
+
+                            BILLEDUDTRÆK SLUT!
+
+                    -->
+
+                </div>
+            </asp:ContentPlaceHolder>
+            </div>
+
+           
+
+            <footer>
+
+                <div id="footer"></div>
+
+            </footer>
+
+        </div>
+
+        </form>
+
+    </body>
+
+</html>
