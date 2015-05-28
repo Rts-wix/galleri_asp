@@ -1,0 +1,106 @@
+/* CSS Document */
+/* redefinering */
+/* opsætning */
+
+div{
+	
+	/*border: solid 1px red;*/
+	
+}
+
+#main
+{
+	width:				955px;
+	height:				600px;
+	background-image:	url(../bg/galleri_bg.jpg);
+	margin:				auto;
+}
+#head
+{
+	width:				100%;
+	height:				87px;
+}
+#popup
+{
+	width:				800px;
+	height:				533px;
+}
+#menu
+{
+	width:				168px;
+	height:				400px;
+	margin-top:			80px;
+	margin-left:		45px;
+	border-right:		1px dotted #FFF;
+	float:				left;
+}
+#container
+{
+	width:				695px;
+	height:				482px;
+}
+#content
+{
+	width:				735px;
+/*	height:				431px;
+	border:				1px solid #FFF;*/
+	float:				left;
+}
+#content_top
+{
+	width:				735px;
+	height:				80px;
+	float:				left;
+}
+#content_top_album
+{
+	width:				150px;
+	height:				20px;
+	margin-top:			10px;
+	margin-right:		40px;
+	text-align:			right;
+	float:				right;
+}
+#content_ikon
+{
+	width:				680px;
+	height:				402px;
+/*	margin-top:			80px;
+	margin-left:		80px;*/
+	float:				left;
+	overflow:			auto;
+}
+#content_midt
+{
+	width:				413px;
+	height:				482px;
+	float:				left;
+}
+#content_right
+{
+	width:				316px;
+	height:				482px;
+	float:				right;
+}
+#footer
+{
+	width:				955px;
+	height:				29px;
+	border-top:			1px dotted #FFF;
+	clear:				both;
+}
+
+.ikon
+{
+	width:				140px;
+	height:				93px;
+	float:				left;
+	margin-left:		11px;
+	margin-bottom:		20px;
+}
+.ikon img
+{
+	border:				1px;
+	border-color:		#CCC;
+	float:				right;
+}

@@ -1,0 +1,115 @@
+/* CSS Document */
+body
+{
+	font:				0.8em/1.0em Verdana, Geneva, sans-serif;
+	background-color:	#000;
+	margin:				0;
+}
+h1, h2, h3, h4, h5, h6
+{
+	margin:				0;
+	color:				#999;
+}
+h1
+{
+	font-size:			110%;
+	color:				#FFF;
+}
+p
+{
+	margin:				0,0,0.75em,0;
+}
+img
+{
+	border:				0;
+}
+
+/* CSS Menu */
+
+.navcontainer 
+{
+	width: 							110px;
+	list-style-type: 				square;
+	margin-left:					5px;
+	float: 							left;
+	/*list-style-position: 			outside;*/
+}
+
+.navcontainer ul 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	color: 							#FFFFFF;
+	margin-left: 					0px;
+	padding-left: 					0px;
+	list-style: 					none;
+}
+.navcontainer a 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	
+	color: 							#FFF;
+	display: 						block;
+	padding: 						3px;
+	width: 							110px;
+	/*background-color:				#FFFFFF;
+	opacity: 0.4; 
+	filter: alpha(opacity=50);
+	border-right-width: 			1px;
+	border-right-style: 			dotted;
+	border-right-color:				#3366FF;
+	list-style-position: 			outside;*/
+}
+.navcontainer a:link 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	color:							#FFF;
+	text-decoration: 				none;
+	/*list-style-position: 			outside;*/
+	border-right:					dotted 1px #3366FF;
+	/*border-bottom:					dotted 1px #3366FF;*/
+}
+.navcontainer a:visited 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	color: 							#FFF;
+	text-decoration: 				none;
+	/*list-style-position: 			outside;*/
+}
+.navcontainer a:active 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	color: 							#660000;
+	text-decoration: 				none;
+	/*list-style-position: 			outside;*/
+}
+.navcontainer a:hover 
+{
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						11px;
+	color: 							#FFFFFF;
+	text-decoration: 				none;
+	background-color:				#006666;
+	/*list-style-position: 			outside;*/
+}
+
+
+a:link {
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						10px;
+	color:							#336666;
+}
+a:visited {
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						10px;
+	color: 							#336666;
+}
+a:hover {
+	font-family: 					Verdana, Arial, Helvetica, sans-serif;
+	font-size: 						10px;
+	color:							#663333;
+}

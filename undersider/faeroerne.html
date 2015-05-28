@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!--
+
+	Inkluder den CSS fil der styrer styling af jQuery lightbox plugin.
+
+-->
+
+<link rel="stylesheet" type="text/css" href="../css/opsaetning.css"/>
+<link rel="stylesheet" type="text/css" href="../css/form.css"/>
+
+<!--
+	
+	jQuery lightbox benytter sig af jQuerys JavaScript biblioteket.
+	I skal derfor linke til følgende JavaScript filer herunder. JavaScript filerne er placeret I mappen js.
+
+	1. jquery.js
+	2. jquery.lightbox-0.5.js
+
+-->
+
+<script type="text/javascript">
+	
+	$(function(){
+		$('.ikon a').lightBox();
+	});
+
+</script>
+<title>Galleri</title>
+</head>
+
+	<body>
+		
+		<div id="main">
+			
+			<div id="head"></div>
+			
+			<div id="menu" class="navcontainer">
+				
+				<h3>fotoalbums:</h3>
+			
+				<nav>
+
+					<!--
+					
+						BILLEDUDTRÆK START:
+						Herunder er forsidens 8 billeder defineret statisk. Jeres opgave er at generere et 
+						dynamisk udtræk, begrænset til 8 tilfældige billeder.
+	 
+	 					POPUP:
+						1. jQuery Lightbox - Følg instruktionen i dokumentets <head></head>
+						2. Hvert thumbnail skal være et link som peger på den store udgave af billedet på serveren.
+	 
+	 					I PRAKSIS:
+						1. DB: Opret forbindelse til projektes database.
+						2. SQL: Hent relevant data fra databasen.
+						3. PHP/C#: Benyt en løkke til at udskrive resultatet.
+					
+					-->
+
+					<ul>
+
+						<li><a href="../index.html">Velkommen</a></li>
+						<li><a href="faeroerne.html">Færøerne</a></li>
+						<li><a href="berlin.html">Berlin</a></li>
+						<li><a href="nytaar.html">Nytår</a></li>
+
+					</ul>
+
+					<!-- 
+
+						MENU SLUT 
+
+					-->
+
+				</nav>
+			
+			</div>
+			
+			<div id="content">
+				
+				<div id="content_top">
+
+					<div id="content_top_album">
+
+							<h1>Færøerne</h1>
+
+					</div>
+
+				</div>
+
+				<div id="content_ikon">
+
+						<div class="ikon"><img src="../foto_ikon/skibe_i_taagen.jpg" alt="" /></div>
+						<div class="ikon"><img src="../foto_ikon/post_skib.jpg" alt="" /></div>
+						<div class="ikon"><img src="../foto_ikon/hus_i_taagen.jpg" alt="" /></div>
+						<div class="ikon"><img src="../foto_ikon/vaedder.jpg" alt="" /></div>
+						<div class="ikon"><img src="../foto_ikon/lobra.jpg" alt="" /></div>      
+
+				</div>
+				
+			</div>
+			
+			<footer>
+
+				<div id="footer"></div>
+
+			</footer>
+		
+		</div>
+		
+	</body>
+	
+</html>
